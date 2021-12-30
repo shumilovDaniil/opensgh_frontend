@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 export default function Header() {
-	const HeaderWrapper = styled.header`
+	const Wrapper = styled.header`
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
-		padding: 17px 16px;
+		padding: 20px 0 17px;
 
 		strong {
 			a {
@@ -45,7 +45,7 @@ export default function Header() {
 	`
 
 	return (
-		<HeaderWrapper>
+		<Wrapper>
 			<strong>
 				<a href='#'>opensgh</a>
 			</strong>
@@ -56,6 +56,6 @@ export default function Header() {
 					<button>Pol</button>
 				</div>
 			</div>
-		</HeaderWrapper>
+		</Wrapper>
 	)
 }
