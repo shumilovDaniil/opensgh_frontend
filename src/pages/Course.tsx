@@ -62,6 +62,7 @@ export const Course: React.FC = () => {
 		background: #fff;
 		padding: 16px 18px;
 		border-radius: 24px;
+		margin-bottom: 8px;
 
 		.teacherTop {
 			display: flex;
@@ -91,6 +92,13 @@ export const Course: React.FC = () => {
 				color: #686f78;
 			}
 		}
+	`
+
+	const SubjectAbout = styled.div`
+		background: #fff;
+		padding: 16px 18px;
+		border-radius: 24px;
+    mix-blend-mode
 	`
 
 	return (
@@ -167,6 +175,31 @@ export const Course: React.FC = () => {
 					</a>
 				</div>
 			</TeacherInfo>
+
+			<SubjectAbout>
+				<h4>About</h4>
+				<p>
+					Algebra - a major in the field of quantitative methods in economics
+					and information systems, implemented during the studies of the first
+					degree. The aim of the course is to complete t...
+				</p>
+				<a href='#'>Show all</a>
+
+				<h5>Study plan</h5>
+				<ol>
+					<li>
+						Algebra - a major in the field of quantitative methods in economics
+						and
+					</li>
+					<li>information systems, implemented...</li>
+				</ol>
+				<a href='#'>Show all</a>
+
+				<strong>minor</strong>
+				<a href='#'>
+					European Economic Integration Towards Global Challenges<span></span>
+				</a>
+			</SubjectAbout>
 		</PageWrapper>
 	)
 }
