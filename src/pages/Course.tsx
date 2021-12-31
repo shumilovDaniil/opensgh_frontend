@@ -11,8 +11,17 @@ export const Course: React.FC = () => {
 			padding: 0 0 27px 30px;
 			font-size: 14px;
 		}
+	`
 
-		.courseDesc {
+	const CourseInfoWrapper = styled.div`
+		background: #fff;
+		padding: 16px 18px;
+		border-radius: 24px;
+
+		h2 {
+			font-size: 28px;
+			font-weight: 600;
+			line-height: 1.25;
 		}
 
 		.feature {
@@ -36,6 +45,18 @@ export const Course: React.FC = () => {
 		}
 	`
 
+	const CourseRating = styled.div`
+		li {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			strong {
+				font-weight: 400;
+			}
+		}
+	`
+
 	return (
 		<PageWrapper>
 			<Header />
@@ -44,7 +65,7 @@ export const Course: React.FC = () => {
 				<a href='#'>Elective courses</a>
 			</div>
 
-			<div className='courseDesc'>
+			<CourseInfoWrapper>
 				<h2>International Business Transactions and Logistics Operations</h2>
 				<div className='feature'>
 					<span>121151</span>
@@ -64,7 +85,23 @@ export const Course: React.FC = () => {
 						<span>🔖</span>100 hours
 					</li>
 				</ul>
-			</div>
+				<CourseRating>
+					<ul>
+						<li>
+							<strong>How easy to pass</strong>
+							<span>⭐⭐⭐⭐⭐</span>
+						</li>
+						<li>
+							<strong>Atmosphere in classes</strong>
+							<span>⭐⭐⭐⭐⭐</span>
+						</li>
+						<li>
+							<strong>How clear explanations</strong>
+							<span>⭐⭐⭐⭐⭐</span>
+						</li>
+					</ul>
+				</CourseRating>
+			</CourseInfoWrapper>
 		</PageWrapper>
 	)
 }
