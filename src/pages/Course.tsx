@@ -98,7 +98,14 @@ export const Course: React.FC = () => {
 		background: #fff;
 		padding: 16px 18px;
 		border-radius: 24px;
-    mix-blend-mode
+		margin-bottom: 8px;
+	`
+
+	const Reviews = styled.div`
+		background: #fff;
+		padding: 16px 18px;
+		border-radius: 24px;
+		margin-bottom: 8px;
 	`
 
 	return (
@@ -176,6 +183,7 @@ export const Course: React.FC = () => {
 				</div>
 			</TeacherInfo>
 
+			{/* REVIEWS BLOCK */}
 			<SubjectAbout>
 				<h4>About</h4>
 				<p>
@@ -200,6 +208,45 @@ export const Course: React.FC = () => {
 					European Economic Integration Towards Global Challenges<span></span>
 				</a>
 			</SubjectAbout>
+
+			<Reviews>
+				<h4>Reviews</h4>
+				<span className='reviewsCounter'>18</span>
+
+				{/* Sign/Log warning ==> Component */}
+				<strong>Log in or sign up to write a review or a comment.</strong>
+				<button>Log in</button>
+				<button>Sign up</button>
+
+				{/* Comment component */}
+
+				<div className='userCommentInfo'>
+					<img src='/images/user_photo.png' alt='User photo' />
+					<strong>Giorgio Z</strong>
+					<span className='userCommentTime'>50 min</span>
+				</div>
+				<div className='userRating'>
+					<span>Overall</span>
+					<span>4,5 ⭐</span>
+				</div>
+
+				<div className='commentContent'>
+					<p>
+						The course was very comprehensive and easy to understand. The
+						instructors made sure that they are giving the information in a way
+						that won't make me confused. Thank you so much for this great
+						course!
+					</p>
+				</div>
+
+				<div className='commentOptions'>
+					<a href='#'>Reply</a>
+					<div className='commentRating'>
+						<button>👍</button>
+						<button>👎</button>
+					</div>
+				</div>
+			</Reviews>
 		</PageWrapper>
 	)
 }
