@@ -8,8 +8,13 @@ export const Course: React.FC = () => {
 		padding: 0 16px 24px;
 
 		.backLink {
-			padding: 0 0 27px 30px;
+			padding: 0 0 27px 0;
 			font-size: 14px;
+
+			span {
+				color: #8693a5;
+				padding-right: 30px;
+			}
 		}
 	`
 
@@ -113,12 +118,6 @@ export const Course: React.FC = () => {
 		border-radius: 24px;
 		margin-bottom: 8px;
 
-		.teacherItems {
-		}
-
-		.teacherItem {
-		}
-
 		.teacherItemTop {
 			display: flex;
 			flex-wrap: wrap;
@@ -140,8 +139,9 @@ export const Course: React.FC = () => {
 	return (
 		<PageWrapper>
 			<Header />
+
 			<div className='backLink'>
-				<span></span>
+				<span className='icon-arrow-left'></span>
 				<a href='#'>Elective courses</a>
 			</div>
 
