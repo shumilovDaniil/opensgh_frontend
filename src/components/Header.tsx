@@ -50,7 +50,6 @@ export default function Header() {
 				<a href='#'>opensgh</a>
 			</strong>
 			<div className='supportBlock'>
-				<img src='./images/icons/logo.svg' alt='opensgh logotype' />
 				<div className='languages'>
 					<button>Eng</button>
 					<button>Pol</button>

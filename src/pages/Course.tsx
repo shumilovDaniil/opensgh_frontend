@@ -17,6 +17,7 @@ export const Course: React.FC = () => {
 		background: #fff;
 		padding: 16px 18px;
 		border-radius: 24px;
+		margin-bottom: 8px;
 
 		h2 {
 			font-size: 28px;
@@ -57,6 +58,41 @@ export const Course: React.FC = () => {
 		}
 	`
 
+	const TeacherInfo = styled.div`
+		background: #fff;
+		padding: 16px 18px;
+		border-radius: 24px;
+
+		.teacherTop {
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content: space-between;
+
+			img {
+				margin-right: 8px;
+			}
+		}
+
+		.teacherName {
+			margin-bottom: 8px;
+
+			h4 {
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 25px;
+				color: #001a1a;
+				margin-bottom: 2px;
+			}
+
+			strong {
+				font-size: 13px;
+				line-height: 17px;
+				color: #686f78;
+			}
+		}
+	`
+
 	return (
 		<PageWrapper>
 			<Header />
@@ -65,6 +101,7 @@ export const Course: React.FC = () => {
 				<a href='#'>Elective courses</a>
 			</div>
 
+			{/* COURSE INFO COMPONENT */}
 			<CourseInfoWrapper>
 				<h2>International Business Transactions and Logistics Operations</h2>
 				<div className='feature'>
@@ -102,6 +139,34 @@ export const Course: React.FC = () => {
 					</ul>
 				</CourseRating>
 			</CourseInfoWrapper>
+
+			{/* TEACHER INFO COMPONENT */}
+			<TeacherInfo>
+				<div className='teacherTop'>
+					<img src='./images/teacher_photo.png' alt='Teacher photo' />
+					<div className='teacherName'>
+						<h4>dr Lucasz Dwilewicz</h4>
+						<strong>
+							Professor, doctor of the College of Economic Analyzes
+						</strong>
+					</div>
+				</div>
+				<div className='teacherContacts'>
+					<ul>
+						<li>
+							<a href='mailto:doro@sgh.waw.pl'>doro@sgh.waw.pl</a>
+						</li>
+						<li>
+							<a href='mailto:doro@sgh.waw.pl'>
+								slawomir.dorosiewicz@sgh.waw.pl009004{' '}
+							</a>
+						</li>
+					</ul>
+					<a href='#'>
+						See all 18 reviews<span></span>
+					</a>
+				</div>
+			</TeacherInfo>
 		</PageWrapper>
 	)
 }
