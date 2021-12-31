@@ -5,7 +5,7 @@ import Header from '../components/Header'
 
 export const Course: React.FC = () => {
 	const PageWrapper = styled.div`
-		padding: 0 16px;
+		padding: 0 16px 24px;
 
 		.backLink {
 			padding: 0 0 27px 30px;
@@ -106,6 +106,35 @@ export const Course: React.FC = () => {
 		padding: 16px 18px;
 		border-radius: 24px;
 		margin-bottom: 8px;
+	`
+	const OtherTeachers = styled.div`
+		background: #fff;
+		padding: 16px 18px;
+		border-radius: 24px;
+		margin-bottom: 8px;
+
+		.teacherItems {
+		}
+
+		.teacherItem {
+		}
+
+		.teacherItemTop {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.teacherItemInfo {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+
+			img {
+				margin-right: 8px;
+			}
+		}
 	`
 
 	return (
@@ -247,6 +276,39 @@ export const Course: React.FC = () => {
 					</div>
 				</div>
 			</Reviews>
+
+			{/* OTHER_TEACHERS BLOCK */}
+			<OtherTeachers>
+				<h2>This course with other teachers</h2>
+
+				<div className='teacherItems'>
+					<div className='teacherItem'>
+						<div className='teacherItemTop'>
+							<div className='teacherItemInfo'>
+								<img src='images/teacher-mini_photo.png' alt='Teacher photo' />
+								<strong>dr Anna jarosz-Nojszewska</strong>
+							</div>
+							<div className='addToFavorite'>🔖</div>
+						</div>
+						<CourseRating>
+							<ul>
+								<li>
+									<strong>How easy to pass</strong>
+									<span>⭐⭐⭐⭐⭐</span>
+								</li>
+								<li>
+									<strong>Atmosphere in classes</strong>
+									<span>⭐⭐⭐⭐⭐</span>
+								</li>
+								<li>
+									<strong>How clear explanations</strong>
+									<span>⭐⭐⭐⭐⭐</span>
+								</li>
+							</ul>
+						</CourseRating>
+					</div>
+				</div>
+			</OtherTeachers>
 		</PageWrapper>
 	)
 }
