@@ -8,19 +8,20 @@ export const Course: React.FC = () => {
 		padding: 0 16px 24px;
 
 		.backLink {
-			padding: 0 0 27px 0;
+			display: flex;
+			align-items: center;
+			margin: 0 0 24px 0;
 			font-size: 14px;
+			color: #686f78;
 
-			span {
-				color: #8693a5;
-				padding-right: 30px;
+			img {
+				margin-right: 9px;
 			}
 		}
 	`
-
 	const CourseInfoWrapper = styled.div`
 		background: #fff;
-		padding: 16px 18px;
+		padding: 16px 18px 6px;
 		border-radius: 24px;
 		margin-bottom: 8px;
 
@@ -28,21 +29,34 @@ export const Course: React.FC = () => {
 			font-size: 28px;
 			font-weight: 600;
 			line-height: 1.25;
+			margin-bottom: 8px;
 		}
 
 		.feature {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
+			align-items: center;
+			font-size: 14px;
+			line-height: 18px;
+			color: #686f78;
+			margin-bottom: 11px;
 		}
 
 		.courseDesc_items {
 			display: flex;
 			flex-wrap: wrap;
+			margin-bottom: 15px;
 
 			li {
-				margin-right: 24px;
-				padding-bottom: 12px;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				font-size: 16px;
+				color: #002222;
+				line-height: 14px;
+				padding-bottom: 5px;
+				margin: 0 24px 5px 0;
 
 				span {
 					padding-right: 6px;
@@ -50,19 +64,28 @@ export const Course: React.FC = () => {
 			}
 		}
 	`
-
 	const CourseRating = styled.div`
 		li {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 6px;
 
 			strong {
 				font-weight: 400;
+				font-size: 14px;
+			}
+
+			.stars {
+				margin-right: 24px;
+
+				img + img {
+					margin-left: 4px;
+				}
 			}
 		}
 	`
-
 	const TeacherInfo = styled.div`
 		background: #fff;
 		padding: 16px 18px;
@@ -98,14 +121,12 @@ export const Course: React.FC = () => {
 			}
 		}
 	`
-
 	const SubjectAbout = styled.div`
 		background: #fff;
 		padding: 16px 18px;
 		border-radius: 24px;
 		margin-bottom: 8px;
 	`
-
 	const Reviews = styled.div`
 		background: #fff;
 		padding: 16px 18px;
@@ -140,45 +161,77 @@ export const Course: React.FC = () => {
 		<PageWrapper>
 			<Header />
 
-			<div className='backLink'>
-				<span className='icon-arrow-left'></span>
-				<a href='#'>Elective courses</a>
-			</div>
+			<a className='backLink' href='#'>
+				<img src='images/icons/arrow-left.svg' alt='arrow back' />
+				Elective courses
+			</a>
 
 			{/* COURSE INFO COMPONENT */}
 			<CourseInfoWrapper>
 				<h2>International Business Transactions and Logistics Operations</h2>
 				<div className='feature'>
 					<span>121151</span>
-					<span>🔖</span>
+					<span>
+						<img src='./images/icons/save.svg' alt='' />
+					</span>
 				</div>
 				<ul className='courseDesc_items'>
 					<li>
-						<span>🔖</span>Eng
+						<span>
+							<img src='./images/icons/globus.svg' alt='globus icon' />
+						</span>
+						Eng
 					</li>
 					<li>
-						<span>🔖</span>Lecture + Exercises
+						<span>
+							<img src='./images/icons/circle.svg' alt='circle icon' />
+						</span>
+						Lecture + Exercises
 					</li>
 					<li>
-						<span>🔖</span>6 credits
+						<span>
+							<img src='./images/icons/diamond.svg' alt='diamond icon' />
+						</span>
+						6 credits
 					</li>
 					<li>
-						<span>🔖</span>100 hours
+						<span>
+							<img src='./images/icons/time.svg' alt='time icon' />
+						</span>
+						100 hours
 					</li>
 				</ul>
 				<CourseRating>
 					<ul>
 						<li>
 							<strong>How easy to pass</strong>
-							<span>⭐⭐⭐⭐⭐</span>
+							<span className='stars'>
+								<img src='./images/icons/star-black.svg' alt='star black' />
+								<img src='./images/icons/star-black.svg' alt='star black' />
+								<img src='./images/icons/star-black.svg' alt='star black' />
+								<img src='./images/icons/star-black.svg' alt='star black' />
+								<img src='./images/icons/star-white.svg' alt='star white' />
+							</span>
 						</li>
 						<li>
 							<strong>Atmosphere in classes</strong>
-							<span>⭐⭐⭐⭐⭐</span>
+							<span className='stars'>
+								<img src='./images/icons/star-black.svg' alt='star black' />
+								<img src='./images/icons/star-black.svg' alt='star black' />
+								<img src='./images/icons/star-black.svg' alt='star black' />
+								<img src='./images/icons/star-white.svg' alt='star white' />
+								<img src='./images/icons/star-white.svg' alt='star white' />
+							</span>
 						</li>
 						<li>
 							<strong>How clear explanations</strong>
-							<span>⭐⭐⭐⭐⭐</span>
+							<span className='stars'>
+								<img src='./images/icons/star-black.svg' alt='star black' />
+								<img src='./images/icons/star-black.svg' alt='star black' />
+								<img src='./images/icons/star-black.svg' alt='star black' />
+								<img src='./images/icons/star-black.svg' alt='star black' />
+								<img src='./images/icons/star-white.svg' alt='star white' />
+							</span>
 						</li>
 					</ul>
 				</CourseRating>

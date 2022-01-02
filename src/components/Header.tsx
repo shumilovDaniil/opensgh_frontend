@@ -7,7 +7,7 @@ export default function Header() {
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
-		padding: 20px 0 17px;
+		padding: 17px 0 27px;
 
 		strong {
 			a {
@@ -22,10 +22,6 @@ export default function Header() {
 			display: flex;
 			flex-wrap: wrap;
 
-			img {
-				margin-right: 29px;
-			}
-
 			button {
 				background: none;
 				border: none;
@@ -38,9 +34,23 @@ export default function Header() {
 			}
 		}
 
+		.supportImg {
+			cursor: pointer;
+			margin-right: 25px;
+		}
+
 		.languages {
 			display: flex;
 			align-items: center;
+
+			button {
+				font-size: 14px;
+				line-height: 1, 28571;
+
+				&.active {
+					font-weight: 600;
+				}
+			}
 		}
 	`
 
@@ -50,8 +60,13 @@ export default function Header() {
 				<a href='#'>opensgh</a>
 			</strong>
 			<div className='supportBlock'>
+				<img
+					className='supportImg'
+					src='./images/icons/search.svg'
+					alt='search'
+				/>
 				<div className='languages'>
-					<button>Eng</button>
+					<button className='active'>Eng</button>
 					<button>Pol</button>
 				</div>
 			</div>
