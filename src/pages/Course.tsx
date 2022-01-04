@@ -361,6 +361,27 @@ export const Course: React.FC = () => {
 		border-radius: 24px;
 		margin-bottom: 8px;
 
+		.teacherItems {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.teacherItem {
+			flex: 0 0 70%;
+			background: #f7f8f8;
+			border: 1px solid #edf0f2;
+			border-radius: 8px;
+			padding: 8px 13px 12px 8px;
+		}
+
+		h2 {
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 30px;
+			color: #001a1a;
+			margin-bottom: 22px;
+		}
+
 		.teacherItemTop {
 			display: flex;
 			flex-wrap: wrap;
@@ -369,12 +390,23 @@ export const Course: React.FC = () => {
 		}
 
 		.teacherItemInfo {
-			display: flex;
-			flex-wrap: wrap;
+			display: inline-flex;
 			align-items: center;
 
 			img {
 				margin-right: 8px;
+			}
+		}
+
+		.teacherRating {
+			span {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+
+				p {
+					margin-right: 5px;
+				}
 			}
 		}
 	`
@@ -587,21 +619,32 @@ export const Course: React.FC = () => {
 								<img src='images/teacher-mini_photo.png' alt='Teacher' />
 								<strong>dr Anna jarosz-Nojszewska</strong>
 							</div>
-							<div className='addToFavorite'>🔖</div>
+							<div className='addToFavorite'>
+								<img src='images/icons/save.svg' alt='save' />
+							</div>
 						</div>
 						<CourseRating>
-							<ul>
+							<ul className='teacherRating'>
 								<li>
 									<strong>How easy to pass</strong>
-									<span>⭐⭐⭐⭐⭐</span>
+									<span>
+										<p>4</p>
+										<img src='images/icons/star-black.svg' alt='star' />
+									</span>
 								</li>
 								<li>
 									<strong>Atmosphere in classes</strong>
-									<span>⭐⭐⭐⭐⭐</span>
+									<span>
+										<p>4</p>
+										<img src='images/icons/star-black.svg' alt='star' />
+									</span>
 								</li>
 								<li>
 									<strong>How clear explanations</strong>
-									<span>⭐⭐⭐⭐⭐</span>
+									<span>
+										<p> 4,5 </p>
+										<img src='images/icons/star-black.svg' alt='star' />
+									</span>
 								</li>
 							</ul>
 						</CourseRating>
