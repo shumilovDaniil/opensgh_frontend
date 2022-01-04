@@ -85,6 +85,7 @@ pre {
 a {
 	background-color: transparent;
 	text-decoration: none;
+	display: inline-block;
 }
 
 /**
@@ -271,7 +272,8 @@ progress {
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
-ul {
+ul,
+ol {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
@@ -373,5 +375,9 @@ h3,
 h4,
 h5,
 h6 {
+	margin: 0;
+}
+
+p {
 	margin: 0;
 }

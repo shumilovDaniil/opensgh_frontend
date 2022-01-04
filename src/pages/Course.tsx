@@ -88,15 +88,16 @@ export const Course: React.FC = () => {
 	`
 	const TeacherInfo = styled.div`
 		background: #fff;
-		padding: 16px 18px;
+		padding: 15px 18px 16px;
 		border-radius: 24px;
 		margin-bottom: 8px;
 
 		.teacherTop {
 			display: flex;
 			flex-wrap: nowrap;
-			align-items: center;
+			align-items: flex-start;
 			justify-content: space-between;
+			margin-bottom: 6px;
 
 			img {
 				margin-right: 8px;
@@ -111,13 +112,27 @@ export const Course: React.FC = () => {
 				font-size: 20px;
 				line-height: 25px;
 				color: #001a1a;
-				margin-bottom: 2px;
+				margin: 4px 0 3px;
 			}
 
 			strong {
 				font-size: 13px;
 				line-height: 17px;
 				color: #686f78;
+				font-weight: 400;
+			}
+
+			.teacherContacts {
+				font-size: 16px;
+				line-height: 23px;
+				ul {
+					li {
+						margin-bottom: 5px;
+						a {
+							color: #002222;
+						}
+					}
+				}
 			}
 		}
 	`
@@ -126,6 +141,80 @@ export const Course: React.FC = () => {
 		padding: 16px 18px;
 		border-radius: 24px;
 		margin-bottom: 8px;
+
+		h4 {
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 25px;
+			color: #001a1a;
+			margin-bottom: 8px;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 23.2px;
+			color: #002222;
+			margin-bottom: 11px;
+		}
+
+		.showAll {
+			padding-bottom: 24px;
+			display: block;
+			font-size: 14px;
+			line-height: 18px;
+			color: #686f78;
+		}
+
+		h5 {
+			font-size: 18px;
+			line-height: 24px;
+			font-weight: 500;
+			margin-bottom: 9px;
+		}
+
+		ol {
+			counter-reset: number;
+			margin-bottom: 9px;
+
+			li {
+				position: relative;
+				padding-left: 17px;
+				margin-left: 8px;
+				counter-increment: number;
+				font-size: 16px;
+				line-height: 23px;
+
+				&::before {
+					position: absolute;
+					content: counter(number);
+					left: 0;
+					top: 0;
+				}
+			}
+		}
+
+		strong {
+			font-size: 13px;
+			line-height: 17px;
+			font-weight: 400;
+			color: #686f78;
+			margin-bottom: 3px;
+		}
+
+		.LinkToChallenge {
+			position: relative;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 20px;
+			color: #001a1a;
+
+			span {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translate(0%, -75%);
+			}
+		}
 	`
 	const Reviews = styled.div`
 		background: #fff;
@@ -161,7 +250,7 @@ export const Course: React.FC = () => {
 		<PageWrapper>
 			<Header />
 
-			<a className='backLink' href='#'>
+			<a className='backLink' href='/#'>
 				<img src='images/icons/arrow-left.svg' alt='arrow back' />
 				Elective courses
 			</a>
@@ -240,7 +329,7 @@ export const Course: React.FC = () => {
 			{/* TEACHER INFO COMPONENT */}
 			<TeacherInfo>
 				<div className='teacherTop'>
-					<img src='./images/teacher_photo.png' alt='Teacher photo' />
+					<img src='./images/teacher_photo.png' alt='Teacher' />
 					<div className='teacherName'>
 						<h4>dr Lucasz Dwilewicz</h4>
 						<strong>
@@ -255,11 +344,11 @@ export const Course: React.FC = () => {
 						</li>
 						<li>
 							<a href='mailto:doro@sgh.waw.pl'>
-								slawomir.dorosiewicz@sgh.waw.pl009004{' '}
+								slawomir.dorosiewicz@sgh.waw.pl009004
 							</a>
 						</li>
 					</ul>
-					<a href='#'>
+					<a href='/#'>
 						See all 18 reviews<span></span>
 					</a>
 				</div>
@@ -271,9 +360,11 @@ export const Course: React.FC = () => {
 				<p>
 					Algebra - a major in the field of quantitative methods in economics
 					and information systems, implemented during the studies of the first
-					degree. The aim of the course is to complete t...
+					degree. The aim of the course is to complet t...
 				</p>
-				<a href='#'>Show all</a>
+				<a className='showAll' href='/#'>
+					Show all
+				</a>
 
 				<h5>Study plan</h5>
 				<ol>
@@ -281,13 +372,18 @@ export const Course: React.FC = () => {
 						Algebra - a major in the field of quantitative methods in economics
 						and
 					</li>
-					<li>information systems, implemented...</li>
+					<li>information systems, implemented..</li>
 				</ol>
-				<a href='#'>Show all</a>
+				<a className='showAll' href='/#'>
+					Show all
+				</a>
 
 				<strong>minor</strong>
-				<a href='#'>
-					European Economic Integration Towards Global Challenges<span></span>
+				<a className='LinkToChallenge' href='/#'>
+					European Economic Integration Towards Global Challenges
+					<span>
+						<img src='./images/icons/long-arrow.svg' alt='arrow' />
+					</span>
 				</a>
 			</SubjectAbout>
 
@@ -303,7 +399,7 @@ export const Course: React.FC = () => {
 				{/* Comment component */}
 
 				<div className='userCommentInfo'>
-					<img src='/images/user_photo.png' alt='User photo' />
+					<img src='/images/user_photo.png' alt='User' />
 					<strong>Giorgio Z</strong>
 					<span className='userCommentTime'>50 min</span>
 				</div>
@@ -322,7 +418,7 @@ export const Course: React.FC = () => {
 				</div>
 
 				<div className='commentOptions'>
-					<a href='#'>Reply</a>
+					<a href='/#'>Reply</a>
 					<div className='commentRating'>
 						<button>👍</button>
 						<button>👎</button>
@@ -338,7 +434,7 @@ export const Course: React.FC = () => {
 					<div className='teacherItem'>
 						<div className='teacherItemTop'>
 							<div className='teacherItemInfo'>
-								<img src='images/teacher-mini_photo.png' alt='Teacher photo' />
+								<img src='images/teacher-mini_photo.png' alt='Teacher' />
 								<strong>dr Anna jarosz-Nojszewska</strong>
 							</div>
 							<div className='addToFavorite'>🔖</div>
